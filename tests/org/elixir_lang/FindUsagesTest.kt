@@ -27,13 +27,13 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (2)
      (2)
      function_recursive_declaration.ex (2)
-      2def function([], acc), do: acc
-      4def function([h | t], acc) do
+      2  def function([], acc), do: acc
+      4  def function([h | t], acc) do
   Value read (1)
    light_idea_test_case (1)
      (1)
      function_recursive_declaration.ex (1)
-      5function(t, [h | acc])
+      5    function(t, [h | acc])
 """,
             usageViewTreeTextRepresentation
         )
@@ -55,13 +55,13 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (2)
      (2)
      function_recursive_usage.ex (2)
-      2def function([], acc), do: acc
-      4def function([h | t], acc) do
+      2  def function([], acc), do: acc
+      4  def function([h | t], acc) do
   Value read (1)
    light_idea_test_case (1)
      (1)
      function_recursive_usage.ex (1)
-      5function(t, [h | acc])
+      5    function(t, [h | acc])
 """,
             usageViewTreeTextRepresentation
         )
@@ -83,7 +83,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      function_single_clause_unused.ex (1)
-      2def function, do: :ok
+      2  def function, do: :ok
 """,
             usageViewTreeTextRepresentation
         )
@@ -105,8 +105,8 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (2)
      (2)
      function_multiple_clauses_unused.ex (2)
-      2def function(list) when is_list(list), do: []
-      3def function(map) when is_map(map), do: %{}
+      2  def function(list) when is_list(list), do: []
+      3  def function(map) when is_map(map), do: %{}
 """,
             usageViewTreeTextRepresentation
         )
@@ -131,12 +131,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      function_multiple_modules_declaration_target.ex (1)
-      2def declaration, do: :ok
+      2  def declaration, do: :ok
   Value read (1)
    light_idea_test_case (1)
      (1)
      function_multiple_modules_declaration_usage.ex (1)
-      3Declaration.declaration()
+      3    Declaration.declaration()
 """,
             usageViewTreeTextRepresentation
         )
@@ -161,12 +161,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      function_multiple_modules_usage_declaration.ex (1)
-      2def declaration, do: :ok
+      2  def declaration, do: :ok
   Value read (1)
    light_idea_test_case (1)
      (1)
      function_multiple_modules_usage_target.ex (1)
-      3Declaration.declaration()
+      3    Declaration.declaration()
 """,
             usageViewTreeTextRepresentation
         )
@@ -191,12 +191,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      function_import_declaration_target.ex (1)
-      2def declaration, do: :ok
+      2  def declaration, do: :ok
   Value read (1)
    light_idea_test_case (1)
      (1)
      function_import_declaration_usage.ex (1)
-      5declaration()
+      5    declaration()
 """,
             usageViewTreeTextRepresentation
         )
@@ -237,12 +237,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      function_import_usage_declaration.ex (1)
-      2def declaration, do: :ok
+      2  def declaration, do: :ok
   Value read (1)
    light_idea_test_case (1)
      (1)
      function_import_usage_target.ex (1)
-      5declaration()
+      5    declaration()
 """,
             usageViewTreeTextRepresentation
         )
@@ -264,12 +264,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      parameter_declaration.ex (1)
-      2defp function(parameter) do
+      2  defp function(parameter) do
   Value read (1)
    light_idea_test_case (1)
      (1)
      parameter_declaration.ex (1)
-      3%{parameter: parameter}
+      3    %{parameter: parameter}
 """,
             usageViewTreeTextRepresentation
         )
@@ -291,7 +291,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      module_recursive_declaration.ex (1)
-      2alias Declaration
+      2  alias Declaration
   Module definition (1)
    light_idea_test_case (1)
      (1)
@@ -331,7 +331,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      module_recursive_usage.ex (1)
-      2alias Declaration
+      2  alias Declaration
   Module definition (1)
    light_idea_test_case (1)
      (1)
@@ -358,8 +358,8 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (2)
      (2)
      module_nested_recursive_declaration.ex (2)
-      2alias Parent.Declaration
-      3alias Parent.{Declaration}
+      2  alias Parent.Declaration
+      3  alias Parent.{Declaration}
   Module definition (1)
    light_idea_test_case (1)
      (1)
@@ -389,7 +389,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      module_multiple_modules_declaration_usage.ex (1)
-      2alias Declaration
+      2  alias Declaration
   Module definition (1)
    light_idea_test_case (1)
      (1)
@@ -433,7 +433,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      module_multiple_modules_usage_target.ex (1)
-      2alias Declaration
+      2  alias Declaration
   Module definition (1)
    light_idea_test_case (1)
      (1)
@@ -460,7 +460,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      parameter_unused.ex (1)
-      2defp function(_parameter) do
+      2  defp function(_parameter) do
 """,
             usageViewTreeTextRepresentation
         )
@@ -482,12 +482,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      parameter_usage.ex (1)
-      2defp function(parameter) do
+      2  defp function(parameter) do
   Value read (1)
    light_idea_test_case (1)
      (1)
      parameter_usage.ex (1)
-      3%{parameter: parameter}
+      3    %{parameter: parameter}
 """,
             usageViewTreeTextRepresentation
         )
@@ -509,12 +509,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      variable_declaration.ex (1)
-      5variable
+      5    variable
   Value write (1)
    light_idea_test_case (1)
      (1)
      variable_declaration.ex (1)
-      3variable = Application.get_env(:variable, :key)
+      3    variable = Application.get_env(:variable, :key)
 """,
             usageViewTreeTextRepresentation
         )
@@ -537,7 +537,7 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      variable_unused.ex (1)
-      3variable = Application.get_env(:variable, :key)
+      3    variable = Application.get_env(:variable, :key)
 """,
             usageViewTreeTextRepresentation
         )
@@ -559,12 +559,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      variable_usage.ex (1)
-      5variable
+      5    variable
   Value write (1)
    light_idea_test_case (1)
      (1)
      variable_usage.ex (1)
-      3variable = Application.get_env(:variable, :key)
+      3    variable = Application.get_env(:variable, :key)
 """,
             usageViewTreeTextRepresentation
         )
@@ -586,12 +586,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      module_attribute_declaration.ex (1)
-      2@module_attribute 1
+      2  @module_attribute 1
   Module attribute read (1)
    light_idea_test_case (1)
      (1)
      module_attribute_declaration.ex (1)
-      4def usage, do: @module_attribute
+      4  def usage, do: @module_attribute
 """,
             usageViewTreeTextRepresentation
         )
@@ -613,12 +613,12 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (1)
      (1)
      module_attribute_usage.ex (1)
-      2@module_attribute 1
+      2  @module_attribute 1
   Module attribute read (1)
    light_idea_test_case (1)
      (1)
      module_attribute_usage.ex (1)
-      4def usage, do: @module_attribute
+      4  def usage, do: @module_attribute
 """,
             usageViewTreeTextRepresentation
         )
@@ -643,9 +643,9 @@ class FindUsagesTest : PlatformTestCase() {
    light_idea_test_case (3)
      (3)
      issue_2374.ex (3)
-      2def foo, do: "foo"
-      3def bar, do: foo()
-      4def baz, do: foo()
+      2  def foo, do: "foo"
+      3  def bar, do: foo()
+      4  def baz, do: foo()
 """,
             usageViewTreeTextRepresentation
         )
